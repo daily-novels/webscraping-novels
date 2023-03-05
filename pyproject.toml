@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "webscraping-novels"
+version = "0.1.0"
+description = "The project will fetch chapters and make them available in an API"
+authors = ["Matheus Henrique <matheus2hcosta@gmail.com>"]
+readme = "README.md"
+packages = [{include = "webscraping_novels"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.92.0"
+requests = "^2.28.2"
+isort = "^5.12.0"
+black = "^23.1.0"
+pre-commit = "^3.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line_length = 80
+indent = "  "
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = false
+known_first_party = "emcasamkt"
+order_by_type= true
